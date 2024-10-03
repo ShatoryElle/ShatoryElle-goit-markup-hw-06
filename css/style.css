@@ -105,6 +105,7 @@ button {
     height: 100%;
 }
 
+
 .nav-list-mobile {
     display: flex;
     flex-direction: column;
@@ -336,7 +337,7 @@ button {
 }
 
 .burger-btn {
-    padding: 0;
+    padding: 16px 0;
     border: none;
     background-color: transparent;
 }
@@ -678,6 +679,7 @@ width: 264px;
 }
 
 .team-item{
+    display: block;
 background-color: #ffffff;
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
@@ -710,31 +712,45 @@ background-color: #ffffff;
         margin-bottom: 8px;
 }
 
-.soc-icon-list{
+.soc-icon-list {
     display: flex;
-        justify-content: center;
-        gap: 24px;
-        list-style: none;
-            margin-top: 8px;
-            align-items: center;
+    justify-content: center;
+    gap: 24px;
+    /*flex-shrink: 0;
+    align-self: flex-end;*/
+    list-style: none;
+    margin-top: 8px;
+    /*padding: 0 16px;
+    flex-direction: row;*/
+    align-items: center;
 }
 
-.soc-icon{
-    width: 100%;
-        height: 100%;
-        background-color: #4d5ae5;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.soc-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.soc-icon:hover{
-    background-color: #404bbf;
+
+.media-icon {
+    fill: #f4f4fd;
 }
+
+.soc-icon {
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.soc-icon:hover,
 .soc-icon:focus {
     background-color: #404bbf;
 }
+
+
 .soc-icon-team{
     width: 40px;
         height: 40px;
@@ -762,11 +778,15 @@ background-color: #ffffff;
 
 
 @media screen and (min-width: 1158px) {
+.team {
+        padding-bottom: 120px;
+        padding-top: 120px;
+    }
 
     .team-list {
         flex-wrap: nowrap;
         gap: 24px;
-        max-width: 1158px;
+        max-width: 1158px;   
     }
 
 }
@@ -925,7 +945,7 @@ font-family: "Raleway", sans-serif;
     display: inline-block;
     justify-content: center;
     margin-bottom: 16px;
-    margin-left: 86px;
+    /*margin-left: 86px;*/
     color: #404bbf;
 }
 .span{
@@ -978,12 +998,15 @@ background-color: #31d0aa;
     fill: #F4F4FD;
 }
 .footer__subscribe-text{
-    margin-bottom: 16px;
+    margin: 0 auto;
+        margin-bottom: 16px;
         font-weight: 500;
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: #ffffff;
+        
+       
 }
 .footer__subscribe-form{
     display: flex;
