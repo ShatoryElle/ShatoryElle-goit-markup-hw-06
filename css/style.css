@@ -216,7 +216,7 @@ button {
     height: 40px;
 }
 
-.social-icon {
+.social-icon-list {
     width: 100%;
     height: 100%;
     background-color: #4d5ae5;
@@ -656,7 +656,7 @@ width: 264px;
     }
 }
 
-/* Our Team */
+/* Our Team 
 .container-team{
     padding: 0 28px;
 }
@@ -689,6 +689,10 @@ background-color: #ffffff;
 }
 
 .team{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 72px 0;
+    justify-content: center;
     background-color: #F4F4FD;
         padding: 120px 0;
 }
@@ -715,13 +719,11 @@ background-color: #ffffff;
 .soc-icon-list {
     display: flex;
     justify-content: center;
-    gap: 24px;
-    /*flex-shrink: 0;
-    align-self: flex-end;*/
+    gap: 40px;
+  
     list-style: none;
     margin-top: 8px;
-    /*padding: 0 16px;
-    flex-direction: row;*/
+
     align-items: center;
 }
 
@@ -790,6 +792,145 @@ background-color: #ffffff;
     }
 
 }
+*/
+
+
+
+
+.team {
+    display: flex;
+        padding: 96px 0 96px 0;
+        background-color: #f4f4fd;
+}
+.team-title {
+    margin-bottom: 72px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2e2f42;
+    text-transform: capitalize;
+}
+
+
+.team-list {
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 72px;
+}
+
+.team-item {
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
+    background-color: #fff;
+}
+
+
+.teams {
+    padding: 32px 0;
+    text-align: center;
+}
+
+
+.team-subtitle {
+    margin-bottom: 8px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        text-align: center;
+        color: #2e2f42;
+        background-color: #fff;
+}
+
+
+.team-text {
+    margin-bottom: 8px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        text-align: center;
+        color: #434455;
+}
+
+
+
+.soc-icon-list {
+    display: flex;
+        justify-content: center;
+        gap: 24px;
+}
+
+
+.soc-icon-team{
+    width: calc((100% - 72px) / 4);
+        width: 40px;
+        height: 40px;
+}
+
+.soc-icon {
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.soc-icon:hover,
+.soc-icon:focus {
+    background-color: #404bbf;
+}
+.media-icon {
+fill: #f4f4fd;
+}
+
+
+@media screen and (min-width: 768px) {
+    .team {
+        padding: 96px 0 96px 0;
+    }
+
+    .team-list {
+        flex-flow: row wrap;
+        gap: 64px 24px;
+        max-width: 552px;
+        margin: 0 auto;
+        display: flex;
+    }
+
+    .team-item {
+        width: calc((100% - 24px) / 2);
+        max-width: 264px;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .team {
+        padding: 120px 0 120px 0;
+    }
+
+    .team-list {
+        max-width: none;
+        display: flex;
+        gap: 24px;
+    }
+
+    .team-item {
+        width: 100%;
+        width: calc((100% - 72px) / 4);
+    }
+}
+
 
 /* Portfolio */
 
@@ -952,12 +1093,21 @@ font-family: "Raleway", sans-serif;
 color: #f4f4fd;
 }
 .footer-text {
+
+/*text-align: center;*/
+    min-width: 288px;
+    font-weight: 400;
     font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+
+    /*font-size: 16px;
     line-height: calc(24 / 16);
     letter-spacing: 0.02em;
     color: #F4F4FD;
     max-width: 264px;
-    margin: 0;
+    margin: 0;*/
 }
 
 .footer-list-title {
@@ -1079,6 +1229,7 @@ margin-left: 16px;
         }
  .footer-text {
      margin-top: 16px;
+     
  }
 
 .footer-container {
@@ -1180,7 +1331,7 @@ width: 264px;
             height: 24px;
             border-radius: 50%;
             border: 1px solid rgba(0, 0, 0, 0.1);
-            background-color: #E7E9FC;
+            /*background-color: #E7E9FC;*/
             transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
                 border 250ms cubic-bezier(0.4, 0, 0.2, 1);
             cursor: pointer;
